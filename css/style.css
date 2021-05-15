@@ -43,3 +43,62 @@ body {
 .logo{
     height:35px;
 }
+.text-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+    
+}
+.heading-primary-main{
+letter-spacing: 35px;
+display: block;
+font-size: 60px;
+font-weight: 400;
+animation: moveInLeft 1.5s;
+/* To hide the little shaking */
+backface-visibility: hidden; 
+
+}
+.heading-primary-sub{
+display: block;
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 17.4px;
+animation: moveInRight 1.5s;
+}
+/* Browser are optimized for opacity and transform for the keyframes animation */
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(5%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(-5%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
